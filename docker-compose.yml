@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=nodejs_express_store
+      - POSTGRES_USER=nodejs_express_store
+      - POSTGRES_PASSWORD=nodejs_express_store
+    ports:
+      - 5432:5432
+    volumes:
+      - /mnt/dev/docker/postgres_data:/var/lib/postgresql/data
